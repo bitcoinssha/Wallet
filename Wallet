@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexora Wallet</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .wallet {
+      width: 375px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .header {
+      background: #007e33;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .network {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .balance {
+      text-align: center;
+      padding: 20px;
+      border-bottom: 1px solid #eaeaea;
+    }
+    .balance h2 { font-size: 28px; color: #00c851; }
+    .balance small { color: #999; }
+    .tokens {
+      padding: 20px;
+    }
+    .token {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .token:last-child { border-bottom: none; }
+    .token .logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #00c851;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    .token-info {
+      display: flex;
+      align-items: center;
+    }
+    .token-name {
+      font-weight: bold;
+    }
+    .token-balance {
+      text-align: right;
+    }
+    .token-balance span {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="wallet">
+    <div class="header">
+      <h1>Nexora Wallet</h1>
+      <div class="network">Mainnet activa</div>
+    </div>
+    <div class="balance">
+      <h2>$1,300,000.00</h2>
+      <small>Saldo Total</small>
+    </div>
+    <div class="tokens">
+      <div class="token">
+        <div class="token-info">
+          <div class="logo" style="background: #26a17b">$</div>
+          <div>
+            <div class="token-name">Tether USD (USDT)</div>
+            <small>300,000 USDT</small>
+          </div>
+        </div>
+        <div class="token-balance">
+          <span>$300,000.00</span>
+        </div>
+      </div>
+      <div class="token">
+        <div class="token-info">
+          <div class="logo" style="background: #007e33">N</div>
+          <div>
+            <div class="token-name">Nexora Token (NEX)</div>
+            <small>1,000,000 NEX</small>
+          </div>
+        </div>
+        <div class="token-balance">
+          <span>$1,000,000.00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
