@@ -1,5 +1,12 @@
-const btn = document.getElementById('toggle-dark');
-btn.onclick = () => {
-  document.body.classList.toggle('dark');
-  btn.textContent = document.body.classList.contains('dark') ? '☀️ Modo claro' : '🌙 Modo oscuro';
-};
+async function connectMetaMask() {
+    if (typeof window.ethereum !== 'undefined') {
+        try {
+            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+            document.getElementById('walletAddress').textContent = 'Wallet: ' + accounts[0];
+        } catch (e) {
+            alert('Conexión rechazada.');
+        }
+    } else {
+        alert('MetaMask no está disponible.');
+    }
+}
