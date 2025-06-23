@@ -1,0 +1,117 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.wallet {
+  width: 375px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.header {
+  background: #007e33;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.network {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.balance {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+.balance h2 { font-size: 28px; color: #00c851; }
+.balance small { color: #999; }
+.tokens {
+  padding: 20px;
+}
+.token {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.token:last-child { border-bottom: none; }
+.token .logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #00c851;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.token-info {
+  display: flex;
+  align-items: center;
+}
+.token-name {
+  font-weight: bold;
+}
+.token-balance {
+  text-align: right;
+}
+.token-balance span {
+  display: block;
+}
+
+/* Botón de modo oscuro */
+#toggle-dark {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: #232323;
+  color: #eee;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+}
+body:not(.dark) #toggle-dark {
+  background: #f2f2f2;
+  color: #232323;
+}
+
+/* MODO OSCURO */
+body.dark {
+  background: #181818;
+}
+body.dark .wallet {
+  background: #232323;
+  color: #eee;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+body.dark .header {
+  background: #101d14;
+  color: #00c851;
+}
+body.dark .network {
+  color: #a0e7b1;
+}
+body.dark .balance h2 {
+  color: #00c851;
+}
+body.dark .balance small {
+  color: #aaa;
+}
+body.dark .token {
+  border-bottom: 1px solid #333;
+}
+body.dark .token .logo {
+  color: #232323;
+}
