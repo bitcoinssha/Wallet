@@ -1,49 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nexora Wallet</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexora Blockchain Wallet</title>
+    <link rel="icon" href="favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button id="toggle-dark">🌙 Modo oscuro</button>
-  <div class="wallet">
-    <div class="header">
-      <h1>Nexora Wallet</h1>
-      <div class="network">Mainnet activa</div>
-    </div>
-    <div class="balance">
-      <h2>$1,300,000.00</h2>
-      <small>Saldo Total</small>
-    </div>
-    <div class="tokens">
-      <div class="token">
+<div class="wallet-container">
+    <div class="wallet-title">Nexora Wallet</div>
+    <div class="wallet-address" id="walletAddress">Wallet: 0x...</div>
+
+    <div class="token">
+        <img src="nex-logo.png" alt="NEX" />
         <div class="token-info">
-          <div class="logo" style="background: #26a17b">$</div>
-          <div>
-            <div class="token-name">Tether USD (USDT)</div>
-            <small>300,000 USDT</small>
-          </div>
+            <div>Nexora Token (NEX)</div>
+            <div class="token-amount">10,000,000.00 NEX</div>
+            <div>$10,000,000.00 USD</div>
         </div>
-        <div class="token-balance">
-          <span>$300,000.00</span>
-        </div>
-      </div>
-      <div class="token">
-        <div class="token-info">
-          <div class="logo" style="background: #007e33">N</div>
-          <div>
-            <div class="token-name">Nexora Token (NEX)</div>
-            <small>1,000,000 NEX</small>
-          </div>
-        </div>
-        <div class="token-balance">
-          <span>$1,000,000.00</span>
-        </div>
-      </div>
     </div>
-  </div>
-  <script src="js/darkmode.js"></script>
+
+    <div class="token">
+        <img src="usdt-logo.png" alt="USDT" />
+        <div class="token-info">
+            <div>Tether (USDT)</div>
+            <div class="token-amount">600,000.00 USDT</div>
+            <div>$600,000.00 USD</div>
+        </div>
+    </div>
+
+    <div class="total-value">Valor Total: $10,600,000.00 USD</div>
+
+    <br/>
+    <button onclick="connectMetaMask()">Conectar MetaMask</button>
+
+    <div class="footer">Nexora Blockchain 2025</div>
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>
